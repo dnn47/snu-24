@@ -1,3 +1,6 @@
+import React from 'react';
+
+
 interface ContentProps {
   week: number;
   img: string;
