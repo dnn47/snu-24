@@ -1,20 +1,15 @@
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .text {
+    font-size: 15vw;
   }
   
-  .animation {
-    font-size: 20vh;
-    color: #003081;
-    animation: fadeInUp 1s ease-in-out; /* Apply the fadeInUp animation */
+  @media (max-width: 768px) {
+    .text {
+      font-size: 20vw;
+    }  
   }
 
-  .text {
-    font-size: 1500%; 
+  @media (min-width: 1200px) {
+    .text {
+      font-size: 10vw;
+    }
   }
