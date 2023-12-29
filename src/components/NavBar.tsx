@@ -1,3 +1,4 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function NavBar() {
@@ -8,7 +9,7 @@ function NavBar() {
   };
 
   return (
-    <div className="container">
+    <div className="container p-4">
       <ul className="nav nav-underline" id="pills-tab" role="tablist">
         <li className="nav-item" role="presentation">
           <button

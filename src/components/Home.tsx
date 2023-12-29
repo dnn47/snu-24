@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Content from "./Content";
 import ScrollButton from "./ScrollButton";
 import texts from "../texts/test";
