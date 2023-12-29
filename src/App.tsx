@@ -5,10 +5,12 @@ import Gilman from "./components/Gilman";
 import Timeline from "./components/Timeline";
 import Landing from "./components/Landing";
 
+// https://coolors.co/222222-ffffff-1c5d99-c8d4df
+
 const App: React.FC = () => {
   return (
     <>
-      <Parallax pages={7} scrolling={true}>
+      <Parallax pages={7}>
         <ParallaxLayer style={{ backgroundColor: "#FFFFFF" }}>
           <Landing />
         </ParallaxLayer>
