@@ -1,34 +1,37 @@
 import React from "react";
-
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate,
-} from "react-router-dom";
-import NavBar from "./components/NavBar";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import About from "./components/About";
 import Gilman from "./components/Gilman";
-import Home from "./components/Home";
+import Timeline from "./components/Timeline";
 import Landing from "./components/Landing";
 
 const App: React.FC = () => {
-  const isHomePage = window.location.pathname === "/";
-
   return (
-    <Router>
-      {!isHomePage && <NavBar />}
+    <>
+      <Parallax pages={7} scrolling={true}>
+        <ParallaxLayer style={{ backgroundColor: "#FFFFFF" }}>
+          <Landing />
+        </ParallaxLayer>
 
-      <div>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/gilman" element={<Gilman />} />
-          <Route path="/*" element={<Navigate to="/" />} />
-        </Routes>
-      </div>
-    </Router>
+        <ParallaxLayer
+          offset={1}
+          factor={4}
+          style={{
+            backgroundColor: "#FFFFFF",
+          }}
+        >
+          <Timeline />
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={5} style={{ backgroundColor: "#FFFFFF" }}>
+          <About />
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={6} style={{ backgroundColor: "#FFFFFF" }}>
+          <Gilman />
+        </ParallaxLayer>
+      </Parallax>
+    </>
   );
 };
 

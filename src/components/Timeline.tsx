@@ -1,10 +1,8 @@
-import React from 'react';
-
+import React from "react";
 import Content from "./Content";
-import ScrollButton from "./ScrollButton";
 import texts from "../texts/test";
 
-function Home() {
+function Timeline() {
   const numberOfWeeks = 15;
 
   return (
@@ -28,11 +26,9 @@ function Home() {
           </div>
         ))}
       </div>
-      <div className="d-flex align-items-center justify-content-center p-5">
-        <ScrollButton />
-      </div>
+      <div className="d-flex align-items-center justify-content-center p-5"></div>
     </>
   );
 }
 
-export default Home;
+export default Timeline;

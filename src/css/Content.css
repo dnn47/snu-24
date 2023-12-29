@@ -1,0 +1,9 @@
+button.custom {
+  border: 0px;
+  background-color: white;
+}
+
+.custom.card-body {
+  border: 0px;
+  background-color: white;
+}

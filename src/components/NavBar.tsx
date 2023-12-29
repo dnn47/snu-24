@@ -21,7 +21,7 @@ function NavBar() {
             role="tab"
             aria-controls="pills-home"
             aria-selected="true"
-            onClick={() => handleNavigation("/Home")}
+            onClick={() => handleNavigation("/home")}
           >
             Home
           </button>
@@ -36,7 +36,7 @@ function NavBar() {
             role="tab"
             aria-controls="pills-profile"
             aria-selected="false"
-            onClick={() => handleNavigation("/About")}
+            onClick={() => handleNavigation("/about")}
           >
             About Me
           </button>
@@ -51,7 +51,7 @@ function NavBar() {
             role="tab"
             aria-controls="pills-contact"
             aria-selected="false"
-            onClick={() => handleNavigation("/Gilman")}
+            onClick={() => handleNavigation("/gilman")}
           >
             Gilman
           </button>
