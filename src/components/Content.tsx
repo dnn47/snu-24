@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/Content.css";
+import { TypeAnimation } from "react-type-animation";
 
 interface ContentProps {
   week: number;
@@ -40,7 +41,14 @@ const Content: React.FC<ContentProps> = ({ week, img, textContent }) => {
               </p>
             </div>
             <div className="col-md-6 text-start">
-              <p>{textContent}</p>
+              <TypeAnimation
+                sequence={[textContent]}
+                wrapper="span"
+                speed={{ type: "keyStrokeDelayInMs", value: 30 }}
+                style={{ display: "inline-block" }}
+                repeat={0}
+              />
+              <p></p>
             </div>
           </div>
         </div>

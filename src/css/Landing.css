@@ -1,20 +1,32 @@
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .animation {
-    font-size: 20vh;
-    color: #003081;
-    animation: fadeInUp 1s ease-in-out; /* Apply the fadeInUp animation */
-  }
 
   .text {
-    font-size: 1500%; 
+    font-size: 4vw; 
+  }
+
+  @media (max-width: 768px) {
+    .text {
+      font-size: 6vw; 
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .text {
+      font-size: 5vw; 
+    }
+  }
+
+  .arrow {
+    font-size: 3vw; 
+  }
+
+  @media (max-width: 768px) {
+    .arrow {
+      font-size: 5vw; 
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .arrow {
+      font-size: 1vw; 
+    }
   }
