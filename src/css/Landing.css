@@ -1,15 +1,32 @@
+
   .text {
-    font-size: 15vw;
+    font-size: 4vw; 
   }
-  
+
   @media (max-width: 768px) {
     .text {
-      font-size: 20vw;
-    }  
+      font-size: 6vw; 
+    }
   }
 
   @media (min-width: 1200px) {
     .text {
-      font-size: 10vw;
+      font-size: 5vw; 
+    }
+  }
+
+  .arrow {
+    font-size: 3vw; 
+  }
+
+  @media (max-width: 768px) {
+    .arrow {
+      font-size: 5vw; 
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .arrow {
+      font-size: 1vw; 
     }
   }

@@ -5,31 +5,28 @@ import Gilman from "./components/Gilman";
 import Timeline from "./components/Timeline";
 import Landing from "./components/Landing";
 
-// https://coolors.co/222222-ffffff-1c5d99-c8d4df
-
 const App: React.FC = () => {
   return (
     <>
-      <Parallax pages={7}>
-        <ParallaxLayer style={{ backgroundColor: "#FFFFFF" }}>
+      <Parallax pages={8}>
+        <ParallaxLayer style={{ backgroundColor: "#F9F9F9" }}>
           <Landing />
         </ParallaxLayer>
-
         <ParallaxLayer
           offset={1}
-          factor={4}
+          factor={5}
           style={{
-            backgroundColor: "#FFFFFF",
+            backgroundColor: "#F9F9F9",
           }}
         >
           <Timeline />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={5} style={{ backgroundColor: "#FFFFFF" }}>
+        <ParallaxLayer offset={6} style={{ backgroundColor: "#F9F9F9" }}>
           <About />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={6} style={{ backgroundColor: "#FFFFFF" }}>
+        <ParallaxLayer offset={7} style={{ backgroundColor: "#F9F9F9" }}>
           <Gilman />
         </ParallaxLayer>
       </Parallax>
