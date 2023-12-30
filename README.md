@@ -1,3 +1,3 @@
 # My SNU Website
 
-This is my Gilman Follow project, where I've created a personal blog to document my study abroad experience at Seoul National University. The platform is built using React, Typescript, and utilizes Firebase for deployment and database management
+Welcome to my Gilman Follow project! I've created a personal blog to chronicle my study abroad experience at Seoul National University. The blog is built on Vite, React, and TypeScript, with Firebase handling deployment and database functionalities.
