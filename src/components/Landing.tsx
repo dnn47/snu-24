@@ -7,9 +7,11 @@ import { ChevronDownIcon } from "@primer/octicons-react";
 function Landing() {
   return (
     <>
-      <div className="position-absolute bottom-0 start-0">
-        <div className="d-flex" style={{ whiteSpace: "pre", padding: "5rem" }}>
+      <div className="container">
+        <div className="row custom-height"></div>
+        <div className="row">
           <TypeAnimation
+            className="text text-left p-5"
             sequence={[
               "hi, i'm dune\ni studied abroad at SNU\nthis is my story",
             ]}
@@ -18,16 +20,14 @@ function Landing() {
             deletionSpeed={10}
             style={{
               whiteSpace: "pre",
-              position: "relative",
-              top: "50%",
             }}
             repeat={0}
-            className="text text-left"
           />
         </div>
       </div>
+
       <div className="position-absolute bottom-0 start-50 translate-middle-x text-center p-5 arrow">
-        <ChevronDownIcon className="chevron-icon p-3" />
+        <ChevronDownIcon className="chevron-icon" />
       </div>
       <div>
         <NavBar

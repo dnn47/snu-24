@@ -30,3 +30,19 @@
       font-size: 1vw; 
     }
   }
+
+  .custom-height {
+    height: 60vh;
+  }
+  
+  @media (max-width: 768px) {
+    .custom-height {
+      height: 50vh;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .custom-height {
+      height: 40vh;
+    }
+  }
