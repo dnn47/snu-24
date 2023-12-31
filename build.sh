@@ -1,0 +1,1 @@
+npm run build && npm run build:about && npm run build:gilman && firebase deploy
