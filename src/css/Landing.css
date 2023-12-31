@@ -30,8 +30,9 @@
       font-size: 1vw; 
     }
   }
+
   .custom-height {
-    height: 70vh;
+    height: 60vh;
   }
   
   @media (max-width: 768px) {
@@ -42,6 +43,6 @@
 
   @media (min-width: 1200px) {
     .custom-height {
-      height: 45vh;
+      height: 40vh;
     }
   }

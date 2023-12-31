@@ -8,8 +8,7 @@ function Landing() {
   return (
     <>
       <div className="container">
-        <div className="row custom-height">
-        </div>
+        <div className="row custom-height"></div>
         <div className="row">
           <TypeAnimation
             className="text text-left p-5"
