@@ -14,7 +14,7 @@ function Landing() {
               "hi, i'm dune\ni studied abroad at SNU\nthis is my story",
             ]}
             wrapper="span"
-            speed={{ type: "keyStrokeDelayInMs", value: 150 }}
+            speed={{ type: "keyStrokeDelayInMs", value: 100 }}
             deletionSpeed={10}
             style={{
               whiteSpace: "pre",
@@ -27,7 +27,7 @@ function Landing() {
         </div>
       </div>
       <div className="position-absolute bottom-0 start-50 translate-middle-x text-center p-5 arrow">
-        <ChevronDownIcon className="chevron-icon" />
+        <ChevronDownIcon className="chevron-icon p-3" />
       </div>
       <div>
         <NavBar
