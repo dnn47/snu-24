@@ -27,7 +27,7 @@ function Landing() {
       </div>
 
       <div className="position-absolute bottom-0 start-50 translate-middle-x text-center p-5 arrow">
-        <ChevronDownIcon className="chevron-icon p-3" />
+        <ChevronDownIcon className="chevron-icon" />
       </div>
       <div>
         <NavBar
