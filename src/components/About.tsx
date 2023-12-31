@@ -1,5 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar";
+import { TypeAnimation } from "react-type-animation";
+import "../css/About.css";
 
 function About() {
   return (
@@ -10,8 +12,23 @@ function About() {
         nameTwo="Gilman Scholarship"
         linkTwo="gilman"
       />
-      <div className="d-flex align-items-center justify-content-center vh-100">
-        <h1>About Page</h1>
+      <div className="container move-down p-5">
+        <div className="row">
+          <TypeAnimation
+            sequence={["About Me"]}
+            wrapper="span"
+            speed={{ type: "keyStrokeDelayInMs", value: 150 }}
+            repeat={0}
+            className="text text-left"
+          />
+          <div className="info">
+            Hello! I'm Dune Nguyen, a Computer Science student at Drexel
+            University with a minor addiction to Muay Thai and an unwavering
+            love for my canine companion, Blue. Come along as I explore the
+            vibrant cities of South Korea, conquer academic challenges at Seoul
+            National University, and discover myself one adventure at a time!
+          </div>
+        </div>
       </div>
     </>
   );

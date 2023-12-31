@@ -27,7 +27,7 @@ const NavBar: React.FC<NavBarProps> = ({
               color: "#003081",
               fontSize: "125%",
             }}
-            href={`/${linkOne}/`}
+            href={`/${linkOne}`}
           >
             {nameOne}
           </a>
@@ -39,7 +39,7 @@ const NavBar: React.FC<NavBarProps> = ({
               color: "#003081",
               fontSize: "125%",
             }}
-            href={`/${linkTwo}/`}
+            href={`/${linkTwo}`}
           >
             {nameTwo}
           </a>
