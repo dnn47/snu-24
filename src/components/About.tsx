@@ -29,6 +29,16 @@ function About() {
             National University, and discover myself one adventure at a time!
           </div>
         </div>
+        <br />
+        <div className="row">
+          <p>
+            <img
+              src="images/me_blue.JPG"
+              className="img-fluid rounded"
+              alt="me and Blue"
+            ></img>
+          </p>
+        </div>
       </div>
     </>
   );
