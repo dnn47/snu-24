@@ -40,8 +40,7 @@ const Content: React.FC<ContentProps> = ({ week, img, textContent }) => {
               </p>
             </div>
             <div className="col-md-6 text-start">
-              {textContent}
-              <p></p>
+              <p>{textContent}</p>
             </div>
           </div>
         </div>
