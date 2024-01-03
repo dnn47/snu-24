@@ -23,7 +23,6 @@ function Landing() {
             }}
             repeat={0}
           />
-          <ChevronDownIcon className="chevron-icon" />
         </div>
       </div>
       <div>
