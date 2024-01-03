@@ -49,7 +49,7 @@ function Gilman() {
               src="images/Gilman_Seal.png"
               className="img-fluid rounded"
               alt="Gilman Logo"
-              style={{ maxWidth: "20%", height: "auto" }}
+              style={{ maxWidth: "50%", height: "auto" }}
             />
           </div>
         </div>
