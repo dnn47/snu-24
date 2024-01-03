@@ -23,15 +23,24 @@ function Gilman() {
           />
         </div>
         <div className="row">
-          <div className="col-md-6">
-            <p>
+          <div className="col-md-6 d-flex justify-content-center align-items-center">
+            <div
+              className="img-fluid rounded"
+              style={{
+                backgroundColor: "#002f6c",
+                width: "100%",
+                padding: "10px",
+                boxSizing: "border-box",
+              }}
+            >
               <img
-                src="images/gilman_seal.PNG"
-                className="img-fluid rounded"
+                src="images/Gilman_Seal.png"
+                className="img-fluid rounded w-100"
                 alt="Gilman Logo"
-              ></img>
-            </p>
+              />
+            </div>
           </div>
+
           <div className="col-md-6">
             <Info
               title="What is Gilman"
