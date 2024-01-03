@@ -19,7 +19,7 @@ function About() {
             wrapper="span"
             speed={{ type: "keyStrokeDelayInMs", value: 150 }}
             repeat={0}
-            className="text text-left"
+            className="text-title text-left"
           />
 
           <div className="card card-body custom pb-0">
@@ -33,7 +33,7 @@ function About() {
                   ></img>
                 </p>
               </div>
-              <div className="col-md-6 d-flex align-items-center text-start info">
+              <div className="col-md-6 d-flex align-items-center text-start textContent">
                 <p>
                   Hello! I'm Dune Nguyen, a Computer Science student at Drexel
                   University with a minor addiction to Muay Thai and an

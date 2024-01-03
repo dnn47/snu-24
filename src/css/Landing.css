@@ -1,16 +1,16 @@
 
-  .text {
+  .text-title {
     font-size: 4vw; 
   }
 
   @media (max-width: 768px) {
-    .text {
+    .text-title {
       font-size: 6vw; 
     }
   }
 
   @media (min-width: 1200px) {
-    .text {
+    .text-title {
       font-size: 5vw; 
     }
   }

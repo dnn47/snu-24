@@ -24,7 +24,7 @@ const Content: React.FC<ContentProps> = ({ week, img, textContent }) => {
           aria-controls={`collapseExample${week}`}
           onClick={handleClick}
         >
-          {`Week ${week}`}
+          <div className="textContent">{`Week ${week}`}</div>
         </button>
       </div>
       <div className="collapse" id={`collapseExample${week}`}>
