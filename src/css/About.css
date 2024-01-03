@@ -2,18 +2,18 @@
     margin-top: 10rem; 
   }
 
-  .info{
+  .textContent{
     font-size: 1.5rem;
 }
 
   @media (max-width: 768px) {
-    .info {
+    .textContent {
       font-size: 4vw; 
     }
   }
 
   @media (min-width: 1200px) {
-    .info {
+    .textContent {
       font-size: 2vw; 
     }
   }

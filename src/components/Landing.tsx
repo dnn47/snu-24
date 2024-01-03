@@ -2,7 +2,6 @@ import React from "react";
 import "../css/Landing.css";
 import { TypeAnimation } from "react-type-animation";
 import NavBar from "./NavBar";
-import { ChevronDownIcon } from "@primer/octicons-react";
 
 function Landing() {
   return (
@@ -11,7 +10,7 @@ function Landing() {
         <div className="row custom-height"></div>
         <div className="row">
           <TypeAnimation
-            className="text text-left p-5"
+            className="text-title text-left p-5"
             sequence={[
               "hi, i'm dune\ni studied abroad at SNU\nthis is my story",
             ]}
@@ -24,10 +23,6 @@ function Landing() {
             repeat={0}
           />
         </div>
-      </div>
-
-      <div className="position-absolute bottom-0 start-50 translate-middle-x text-center p-5 arrow">
-        <ChevronDownIcon className="chevron-icon" />
       </div>
       <div>
         <NavBar
