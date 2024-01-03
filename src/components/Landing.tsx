@@ -11,7 +11,7 @@ function Landing() {
         <div className="row custom-height"></div>
         <div className="row">
           <TypeAnimation
-            className="text-title text-left p-5"
+            className="text text-left p-5"
             sequence={[
               "hi, i'm dune\ni studied abroad at SNU\nthis is my story",
             ]}
