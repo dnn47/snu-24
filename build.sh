@@ -19,8 +19,15 @@ done
 GREEN='\033[0;32m'
 NC='\033[0m'
 
-echo -e "${GREEN}BUILDING AND DEPLOYING${NC}"
-    npm run build && npm run build:about && npm run build:gilman && firebase deploy
+echo -e "${GREEN}BUILDING AND DEPLOYING\n---------------------------${NC}"
+
+npm run build && npm run build:about && npm run build:gilman 
+
+echo -e "${GREEN}BUILDING DONE \n---------------------------${NC}"
+
+firebase deploy
+
+echo -e "${GREEN}DEPLOYMENT DONE \n---------------------------${NC}"
 
 if [ -n "$option_c" ]; then
     echo -e "${GREEN}COMMITTING CHANGES WITH MESSAGE: $option_c${NC}"
@@ -28,6 +35,6 @@ if [ -n "$option_c" ]; then
     git add .
     git commit -a -m "$option_c"
     git status
-    echo -e "${GREEN}DONE!${NC}"
+    echo -e "${GREEN}WORK COMMITTED${NC}"
 
 fi
