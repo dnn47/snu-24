@@ -46,7 +46,7 @@ function Gilman() {
           </div>
           <div className="row d-flex justify-content-center align-items-center">
             <img
-              src="images/Gilman_Seal.png"
+              src="images/gilman_seal.png"
               className="img-fluid rounded"
               alt="Gilman Logo"
               style={{ maxWidth: "50%", height: "auto" }}

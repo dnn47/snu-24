@@ -1,6 +1,6 @@
 
   .text-title {
-    font-size: 4vw; 
+    font-size: 4.5vw; 
   }
 
   @media (max-width: 768px) {
@@ -15,21 +15,6 @@
     }
   }
 
-  .arrow {
-    font-size: 3vw; 
-  }
-
-  @media (max-width: 768px) {
-    .arrow {
-      font-size: 5vw; 
-    }
-  }
-
-  @media (min-width: 1200px) {
-    .arrow {
-      font-size: 1vw; 
-    }
-  }
 
   .custom-height {
     height: 60vh;
@@ -43,6 +28,6 @@
 
   @media (min-width: 1200px) {
     .custom-height {
-      height: 30vh;
+      height: 40vh;
     }
   }

@@ -2,7 +2,6 @@ import React from "react";
 import "../css/Landing.css";
 import { TypeAnimation } from "react-type-animation";
 import NavBar from "./NavBar";
-import { ChevronDownIcon } from "@primer/octicons-react";
 
 function Landing() {
   return (
