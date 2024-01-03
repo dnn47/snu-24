@@ -29,7 +29,7 @@ function About() {
                   <img
                     src="images/me_blue.JPG"
                     className="img-fluid rounded"
-                    alt="me and Blue"
+                    alt="Me and Blue"
                   ></img>
                 </p>
               </div>

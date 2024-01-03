@@ -22,17 +22,28 @@ function Gilman() {
             className="text-title text-left"
           />
         </div>
-        <Info
-          title="What is Gilman"
-          text="The Benjamin A. Gilman Scholarship is a U.S. government program that helps students with limited financial means study or intern abroad. It awards up to $5,000 for credit-bearing programs in diverse countries, focusing on critical languages and underrepresented populations. By broadening access to global experiences, the Gilman Scholarship aims to develop skills crucial for national security and economic prosperity, while fostering cultural understanding and individual growth."
-        />
-        <Info
-          title="How to Apply"
-          text="To apply for the Gilman Scholarship, you'll need to be a U.S. citizen or national, receive a Pell Grant or be eligible for one, and be enrolled in a credit-bearing study abroad or internship program. You'll submit essays about your study plans and community impact, along with transcripts and advisor certifications. Head to the Gilman website for full details and to start your application!"
-        />
-        <Info
-          title="Tips"
-          text="<ul>
+        <div className="row">
+          <div className="col-md-6">
+            <p>
+              <img
+                src="images/gilman_seal.PNG"
+                className="img-fluid rounded"
+                alt="Gilman Logo"
+              ></img>
+            </p>
+          </div>
+          <div className="col-md-6">
+            <Info
+              title="What is Gilman"
+              text="The Benjamin A. Gilman Scholarship is a U.S. government program that helps students with limited financial means study or intern abroad. It awards up to $5,000 for credit-bearing programs in diverse countries, focusing on critical languages and underrepresented populations. By broadening access to global experiences, the Gilman Scholarship aims to develop skills crucial for national security and economic prosperity, while fostering cultural understanding and individual growth."
+            />
+            <Info
+              title="How to Apply"
+              text="To apply for the Gilman Scholarship, you'll need to be a U.S. citizen or national, receive a Pell Grant or be eligible for one, and be enrolled in a credit-bearing study abroad or internship program. You'll submit essays about your study plans and community impact, along with transcripts and advisor certifications. Head to the Gilman website for full details and to start your application!"
+            />
+            <Info
+              title="Tips"
+              text="<ul>
           <li><b>Start early</b>: Give yourself plenty of time to gather materials and write strong essays.</li>
           <li><b>Be Detailed</b>: Research and include specific details from your study aboard program in your essays.</li>
           <li><b>Focus on Growth</b>: Explain how studying abroad will impact your personal and professional development.</li>
@@ -40,7 +51,9 @@ function Gilman() {
           <li><b>Make your essays shine</b>: Write compelling essays that showcase your unique voice and experiences.</li>
           <li><b>Proofread everything</b>: Before you submit your application, have someone else proofread it for any errors, and then proofread it again.</li>
           </ul>"
-        />
+            />
+          </div>
+        </div>
       </div>
     </>
   );
