@@ -23,27 +23,9 @@ function Gilman() {
           />
         </div>
         <div className="row">
-          {/* <div className="col-md-3 d-flex justify-content-center align-items-center">
-            <div
-              className="img-fluid rounded"
-              style={{
-                backgroundColor: "#002f6c",
-                width: "100%",
-                padding: "10px",
-                boxSizing: "border-box",
-              }}
-            >
-              <img
-                src="images/Gilman_Seal.png"
-                className="img-fluid rounded w-100"
-                alt="Gilman Logo"
-              />
-            </div>
-          </div> */}
-
           <div className="col">
             <Info
-              title="What is Gilman"
+              title="Overview"
               text="The Benjamin A. Gilman Scholarship is a U.S. government program that helps students with limited financial means study or intern abroad. It awards up to $5,000 for credit-bearing programs in diverse countries, focusing on critical languages and underrepresented populations. By broadening access to global experiences, the Gilman Scholarship aims to develop skills crucial for national security and economic prosperity, while fostering cultural understanding and individual growth."
             />
             <Info
@@ -58,8 +40,16 @@ function Gilman() {
           <li><b>Focus on Growth</b>: Explain how studying abroad will impact your personal and professional development.</li>
           <li><b>Choose a impactful service project</b>:  Develop a project that addresses a specific need in your host community and ties back to your academic and career goals.</li>
           <li><b>Make your essays shine</b>: Write compelling essays that showcase your unique voice and experiences.</li>
-          <li><b>Proofread everything</b>: Before you submit your application, have someone else proofread it for any errors, and then proofread it again.</li>
+          <li><b>Proofread everything</b>: Have someone else proofread it for any errors, and then proofread it again.</li>
           </ul>"
+            />
+          </div>
+          <div className="row d-flex justify-content-center align-items-center">
+            <img
+              src="images/Gilman_Seal.png"
+              className="img-fluid rounded"
+              alt="Gilman Logo"
+              style={{ maxWidth: "15%", height: "auto" }}
             />
           </div>
         </div>
