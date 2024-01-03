@@ -23,7 +23,7 @@ function Gilman() {
           />
         </div>
         <div className="row">
-          <div className="col-md-6 d-flex justify-content-center align-items-center">
+          <div className="col">
             <div
               className="img-fluid rounded"
               style={{
@@ -39,9 +39,6 @@ function Gilman() {
                 alt="Gilman Logo"
               />
             </div>
-          </div>
-
-          <div className="col-md-6">
             <Info
               title="What is Gilman"
               text="The Benjamin A. Gilman Scholarship is a U.S. government program that helps students with limited financial means study or intern abroad. It awards up to $5,000 for credit-bearing programs in diverse countries, focusing on critical languages and underrepresented populations. By broadening access to global experiences, the Gilman Scholarship aims to develop skills crucial for national security and economic prosperity, while fostering cultural understanding and individual growth."
