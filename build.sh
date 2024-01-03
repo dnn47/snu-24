@@ -16,12 +16,14 @@ while getopts ":c:" opt; do
   esac
 done
 
+GREEN='\033[0;32m'
+NC='\033[0m'
 
-echo "Build and deploying"
+echo -e "${GREEN}Building and deploying${NC}"
     npm run build && npm run build:about && npm run build:gilman && firebase deploy
 
 if [ -n "$option_c" ]; then
-    echo "Committing changes with message: $option_c"
+    echo -e "${GREEN}Committing changes with message: $option_c${NC}"
     git status
     git add .
     git commit -a -m "$option_c"
