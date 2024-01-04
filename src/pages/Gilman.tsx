@@ -1,7 +1,7 @@
 import React from "react";
-import NavBar from "./NavBar";
+import NavBar from "../components/NavBar";
 import { TypeAnimation } from "react-type-animation";
-import Info from "./Info";
+import Info from "../components/Info";
 
 function Gilman() {
   return (

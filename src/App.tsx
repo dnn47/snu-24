@@ -5,9 +5,9 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
-import Gilman from "./components/Gilman";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Gilman from "./pages/Gilman";
 import Translate from "./components/Translate";
 
 const App: React.FC = () => {

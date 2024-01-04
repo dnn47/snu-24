@@ -1,6 +1,6 @@
 import React from "react";
-import Timeline from "./Timeline";
-import Landing from "./Landing";
+import Timeline from "../components/Timeline";
+import Landing from "../components/Landing";
 import "../css/Home.css";
 
 function Home() {

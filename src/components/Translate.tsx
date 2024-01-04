@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import translateText from "../services/GoogleTranslate";
+import translateText from "../utils/GoogleTranslate";
 
 function Translate() {
   const [inputText, setInputText] = useState("");
