@@ -1,10 +1,20 @@
-import React, { useState } from "react";
-import translateText from "../utils/GoogleTranslate";
+import React, { useEffect, useState } from "react";
+import { translateText, getSupportedLanguages } from "../utils/GoogleTranslate";
 
 function Translate() {
   const [inputText, setInputText] = useState("");
-  const [targetLanguage, setTargetLanguage] = useState("es"); // Default: Spanish
-  const [translatedText, setTranslatedText] = useState(""); // State to hold translated text
+  const [targetLanguage, setTargetLanguage] = useState("es");
+  const [translatedText, setTranslatedText] = useState("");
+  const [supportedLanguages, setSupportedLanguages] = useState([]);
+
+  useEffect(() => {
+    const fetchLanguages = async () => {
+      const languages = await getSupportedLanguages();
+      setSupportedLanguages(languages);
+    };
+
+    fetchLanguages();
+  }, []);
 
   const handleTranslate = async () => {
     if (inputText) {
@@ -35,8 +45,11 @@ function Translate() {
         value={targetLanguage}
         onChange={(e) => setTargetLanguage(e.target.value)}
       >
-        <option value="es">Spanish</option>
-        <option value="fr">French</option>
+        {supportedLanguages.map(({ language, name }) => (
+          <option key={language} value={language}>
+            {name}
+          </option>
+        ))}
       </select>
 
       <button className="btn btn-primary mt-3" onClick={handleTranslate}>

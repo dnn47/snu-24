@@ -3,7 +3,7 @@ import axios from "axios";
 const API_KEY = import.meta.env.VITE_SOME_KEY;
 const API_URL = "https://translation.googleapis.com/language/translate/v2";
 
-const translateText = async (text: string, targetLanguage: string) => {
+export const translateText = async (text: string, targetLanguage: string) => {
   try {
     const response = await axios.post(
       `${API_URL}?key=${API_KEY}`,
@@ -33,4 +33,33 @@ const translateText = async (text: string, targetLanguage: string) => {
   }
 };
 
-export default translateText;
+export const getSupportedLanguages = async () => {
+  try {
+    const response = await axios.get(
+      `${API_URL}/languages?key=${API_KEY}&target=en`,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    let result = response.data.data.languages;
+
+    if (result.length > 0 && !result[0].name) {
+      result = result.map(
+        (languageObject: { language: string; name: string }) => [
+          languageObject.language,
+          languageObject.name,
+        ]
+      );
+    }
+
+    console.log("Response Data:", result);
+
+    return result;
+  } catch (error) {
+    console.error("Translation error:", error);
+    throw error;
+  }
+};
