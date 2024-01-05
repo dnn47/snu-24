@@ -19,11 +19,6 @@ export const translateThis = (input: string) => {
   return { translatedString };
 };
 
-export const changeLanguage = async (targetLanguage: string) => {
-  const { setLanguage } = useLanguage();
-  setLanguage(targetLanguage);
-};
-
 function languageSelector() {
   const [targetLanguage, setTargetLanguage] = useState("es");
   const [supportedLanguages, setSupportedLanguages] = useState([]);
