@@ -1,24 +1,16 @@
 import React from "react";
-import { useLanguage } from "../contexts/LanguageContext";
-import Translate from "../components/Translate";
-import { getSupportedLanguages } from "../utils/GoogleTranslate";
+import { translateThis, languageSelector } from "../utils/TranslateServices";
 
-const Test: React.FC = () => {
-  const { language, setLanguage } = useLanguage();
-
-  const changeLanguage = () => {
-    setLanguage("fr");
-  };
-
-  console.log(getSupportedLanguages());
+function Test() {
+  const { translatedString } = translateThis("Hello, world!");
+  const LanguageSelectorComponent = languageSelector();
 
   return (
-    <div>
-      <p>Current Language: {language}</p>
-      <button onClick={changeLanguage}>Change Language</button>
-      <Translate />
-    </div>
+    <>
+      {LanguageSelectorComponent}
+      <p>"Hello, world!" to {translatedString}</p>
+    </>
   );
-};
+}
 
 export default Test;
