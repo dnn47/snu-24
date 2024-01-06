@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, ReactNode } from "react";
 import {
   translateThis,
   languageSelector,
@@ -13,7 +13,7 @@ function Settings() {
   const CurrentLanguageComponent = currentLanguage();
 
   const { String: settings } = translateThis("Settings");
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState<ReactNode | string>("");
 
   useEffect(() => {
     if (hasMounted.current) {
