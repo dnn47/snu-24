@@ -3,26 +3,8 @@ import { useLanguage } from "../contexts/LanguageContext";
 import { useEffect, useState } from "react";
 import React from "react";
 
-export const translateThis = (input: string) => {
-  const { language } = useLanguage();
-  const [translatedString, setTranslatedString] = useState("");
-
-  const fetchData = async () => {
-    const translation = await translateText(input, language);
-    setTranslatedString(translation);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, [language, input]);
-
-  return { translatedString };
-};
-
-function languageSelector() {
-  const [targetLanguage, setTargetLanguage] = useState("es");
+const useSupportedLanguages = () => {
   const [supportedLanguages, setSupportedLanguages] = useState([]);
-  const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
     const fetchLanguages = async () => {
@@ -33,16 +15,41 @@ function languageSelector() {
     fetchLanguages();
   }, []);
 
+  return supportedLanguages;
+};
+
+export const translateThis = (input: string) => {
+  const { globalLanguage } = useLanguage();
+  const [translatedString, setTranslatedString] = useState("");
+
+  const fetchData = async () => {
+    const translation = await translateText(input, globalLanguage);
+    setTranslatedString(translation);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [globalLanguage, input]);
+
+  return { translatedString };
+};
+
+function languageSelector() {
+  const [targetLanguage, setTargetLanguage] = useState("");
+  const supportedLanguages = useSupportedLanguages();
+  const { setGlobalLanguage } = useLanguage();
+  const { translatedString: setLanguageText } = translateThis("Set Language");
+  const { translatedString: translateText } = translateThis("Translate");
+
   const handleTranslate = async () => {
-    setLanguage(targetLanguage);
+    setGlobalLanguage(targetLanguage);
   };
 
   return (
     <>
       <div className="container mt-5">
-        <p>Current Language: {language}</p>
         <label htmlFor="targetLanguage" className="form-label mt-3">
-          Set Language
+          {setLanguageText}
         </label>
         <select
           id="targetLanguage"
@@ -57,11 +64,28 @@ function languageSelector() {
           ))}
         </select>
         <button className="btn btn-primary mt-3" onClick={handleTranslate}>
-          Translate
+          {translateText}
         </button>
       </div>
     </>
   );
 }
 
-export { languageSelector };
+function currentLanguage() {
+  const { globalLanguage } = useLanguage();
+  const supportedLanguages = useSupportedLanguages();
+
+  const currentLanguageObject = supportedLanguages.find(
+    ({ language }) => language === globalLanguage
+  ) as { language: string; name: string } | undefined;
+
+  let current = "";
+
+  if (currentLanguageObject !== undefined) {
+    current = currentLanguageObject.name;
+  }
+
+  return <>{current}</>;
+}
+
+export { languageSelector, currentLanguage };

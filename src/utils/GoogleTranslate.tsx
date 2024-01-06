@@ -18,14 +18,6 @@ export const translateText = async (text: string, targetLanguage: string) => {
       }
     );
 
-    console.log("Request Payload:", {
-      q: text,
-      target: targetLanguage,
-    });
-
-    console.log("Response Status:", response.status);
-    console.log("Response Data:", response.data);
-
     return response.data.data.translations[0].translatedText;
   } catch (error) {
     console.error("Translation error:", error);
@@ -54,8 +46,6 @@ export const getSupportedLanguages = async () => {
         ]
       );
     }
-
-    console.log("Response Data:", result);
 
     return result;
   } catch (error) {
