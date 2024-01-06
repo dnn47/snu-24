@@ -41,6 +41,7 @@ function languageSelector() {
 
   const handleTranslate = async () => {
     setGlobalLanguage(targetLanguage);
+    window.location.reload();
   };
 
   return (

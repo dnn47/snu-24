@@ -12,14 +12,14 @@ function Settings() {
   const LanguageSelectorComponent = languageSelector();
   const CurrentLanguageComponent = currentLanguage();
 
-  const { String: settings } = translateThis("Settings");
-  const [title, setTitle] = useState<ReactNode | string>("");
+  const { String: title } = translateThis("Settings");
+  const [typeAnimation, setTypeAnimation] = useState<ReactNode | string>("");
 
   useEffect(() => {
     if (hasMounted.current) {
-      setTitle(
+      setTypeAnimation(
         <TypeAnimation
-          sequence={[settings]}
+          sequence={[title]}
           wrapper="span"
           speed={{ type: "keyStrokeDelayInMs", value: 150 }}
           repeat={0}
@@ -29,7 +29,7 @@ function Settings() {
     } else {
       hasMounted.current = true;
     }
-  }, [settings]);
+  }, [title]);
 
   return (
     <>
@@ -40,7 +40,7 @@ function Settings() {
         linkTwo="about"
       />
       <div className="container move-down p-5">
-        <div className="row">{title}</div>
+        <div className="row">{typeAnimation}</div>
       </div>
       {translateThis("Current Language: ").String}
       {CurrentLanguageComponent}
