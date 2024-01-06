@@ -20,26 +20,24 @@ const useSupportedLanguages = () => {
 
 export const translateThis = (input: string) => {
   const { globalLanguage } = useLanguage();
-  const [translatedString, setTranslatedString] = useState("");
+  const [String, setString] = useState("");
 
   const fetchData = async () => {
     const translation = await translateText(input, globalLanguage);
-    setTranslatedString(translation);
+    setString(translation);
   };
 
   useEffect(() => {
     fetchData();
   }, [globalLanguage, input]);
 
-  return { translatedString };
+  return { String };
 };
 
 function languageSelector() {
   const [targetLanguage, setTargetLanguage] = useState("");
   const supportedLanguages = useSupportedLanguages();
   const { setGlobalLanguage } = useLanguage();
-  const { translatedString: setLanguageText } = translateThis("Set Language");
-  const { translatedString: translateText } = translateThis("Translate");
 
   const handleTranslate = async () => {
     setGlobalLanguage(targetLanguage);
@@ -49,7 +47,7 @@ function languageSelector() {
     <>
       <div className="container mt-5">
         <label htmlFor="targetLanguage" className="form-label mt-3">
-          {setLanguageText}
+          {translateThis("Set Language").String}
         </label>
         <select
           id="targetLanguage"
@@ -64,7 +62,7 @@ function languageSelector() {
           ))}
         </select>
         <button className="btn btn-primary mt-3" onClick={handleTranslate}>
-          {translateText}
+          {translateThis("Translate").String}
         </button>
       </div>
     </>

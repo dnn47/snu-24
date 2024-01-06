@@ -1,14 +1,11 @@
 import React from "react";
-import { translateThis, languageSelector } from "../utils/TranslateServices";
+import { translateThis } from "../utils/TranslateServices";
 
 function Test() {
-  const { translatedString } = translateThis("Hello, world!");
-  const LanguageSelectorComponent = languageSelector();
-
+  console.log(translateThis("Hello, world!").String);
   return (
     <>
-      {LanguageSelectorComponent}
-      <p>"Hello, world!" to {translatedString}</p>
+      <p>"Hello, world!"</p>
     </>
   );
 }
