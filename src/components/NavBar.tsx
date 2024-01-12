@@ -44,6 +44,18 @@ const NavBar: React.FC<NavBarProps> = ({
             {nameTwo}
           </a>
         </li>
+        <li className="nav-item">
+          <a
+            className="nav-link"
+            style={{
+              color: "#003081",
+              fontSize: "125%",
+            }}
+            href={"/settings"}
+          >
+            <img src="gear-solid.svg" alt="gear icon"></img>
+          </a>
+        </li>
       </ul>
     </div>
   );
