@@ -41,10 +41,14 @@ function Settings() {
       />
       <div className="container move-down p-5">
         <div className="row">{typeAnimation}</div>
+        <div className="mt-5">
+          <div className="textContent">
+            {translateThis("Current Language: ").String}{" "}
+            {CurrentLanguageComponent}
+          </div>
+          <div className="textContent mt-3">{LanguageSelectorComponent}</div>
+        </div>
       </div>
-      {translateThis("Current Language: ").String}
-      {CurrentLanguageComponent}
-      {LanguageSelectorComponent}
     </>
   );
 }

@@ -2,6 +2,7 @@ import { translateText, getSupportedLanguages } from "../utils/GoogleTranslate";
 import { useLanguage } from "../contexts/LanguageContext";
 import { useEffect, useState } from "react";
 import React from "react";
+import "../css/Setting.css";
 
 const useSupportedLanguages = () => {
   const [supportedLanguages, setSupportedLanguages] = useState([]);
@@ -46,25 +47,42 @@ function languageSelector() {
 
   return (
     <>
-      <div className="container mt-5">
-        <label htmlFor="targetLanguage" className="form-label mt-3">
-          {translateThis("Set Language").String}
-        </label>
-        <select
-          id="targetLanguage"
-          className="form-select"
-          value={targetLanguage}
-          onChange={(e) => setTargetLanguage(e.target.value)}
-        >
-          {supportedLanguages.map(({ language, name }) => (
-            <option key={language} value={language}>
-              {name}
-            </option>
-          ))}
-        </select>
-        <button className="btn btn-primary mt-3" onClick={handleTranslate}>
-          {translateThis("Translate").String}
-        </button>
+      <div>
+        <div className="">
+          <div className="row">
+            <div className="col-md-6">
+              <select
+                id="targetLanguage"
+                className="form-select"
+                value={targetLanguage}
+                onChange={(e) => setTargetLanguage(e.target.value)}
+                title={translateThis("Select a Language").String}
+              >
+                <option value="">
+                  {translateThis("Select a Language").String}
+                </option>
+                {supportedLanguages.map(({ language, name }) => (
+                  <option key={language} value={language}>
+                    {name}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="col-md-6 d-flex align-items-center">
+              <button
+                className="btn btn-primary"
+                onClick={handleTranslate}
+                style={{
+                  backgroundColor: "#003081",
+                  borderColor: "#F9F9F9",
+                  color: "#F9F9F9",
+                }}
+              >
+                {translateThis("Translate").String}
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
@@ -84,7 +102,7 @@ function currentLanguage() {
     current = currentLanguageObject.name;
   }
 
-  return <>{current}</>;
+  return <>{translateThis(current).String}</>;
 }
 
 export { languageSelector, currentLanguage };
