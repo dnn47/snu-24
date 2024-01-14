@@ -4,8 +4,8 @@ import {
   languageSelector,
   currentLanguage,
 } from "../utils/TranslateServices";
-import NavBar from "../components/NavBar";
 import { useTitleAnimation } from "../utils/TitleAnimation";
+import SettingsNavBar from "../components/SettingsNavBar";
 
 function Settings() {
   const LanguageSelectorComponent = languageSelector();
@@ -14,12 +14,7 @@ function Settings() {
 
   return (
     <>
-      <NavBar
-        nameOne={translateThis("Home").String}
-        linkOne="home"
-        nameTwo={translateThis("About").String}
-        linkTwo="about"
-      />
+      <SettingsNavBar />
       <div className="container move-down p-5">
         <div className="row">{typeAnimation}</div>
         <div className="mt-5">
