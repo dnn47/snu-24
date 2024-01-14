@@ -13,8 +13,13 @@ export const useTitleAnimation = (initialTitle: string) => {
         <TypeAnimation
           sequence={[title]}
           wrapper="span"
-          speed={{ type: "keyStrokeDelayInMs", value: 150 }}
+          speed={{ type: "keyStrokeDelayInMs", value: 100 }}
           repeat={0}
+          style={{
+            whiteSpace: "pre-line",
+            width: "50rem",
+            display: "block",
+          }}
           className="text-title text-left"
         />
       );

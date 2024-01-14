@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/Content.css";
+import { translateThis } from "../utils/TranslateServices";
 
 interface ContentProps {
   week: number;
@@ -8,10 +9,6 @@ interface ContentProps {
 }
 
 const Content: React.FC<ContentProps> = ({ week, img, textContent }) => {
-  const handleClick = () => {
-    console.log("Clicked");
-  };
-
   return (
     <div>
       <div className="d-inline-flex gap-1">
@@ -22,9 +19,10 @@ const Content: React.FC<ContentProps> = ({ week, img, textContent }) => {
           data-bs-target={`#collapseExample${week}`}
           aria-expanded="false"
           aria-controls={`collapseExample${week}`}
-          onClick={handleClick}
         >
-          <div className="textContent">{`Week ${week}`}</div>
+          <div className="textContent">
+            {translateThis(`Week ${week}`).String}
+          </div>
         </button>
       </div>
       <div className="collapse" id={`collapseExample${week}`}>
@@ -35,12 +33,12 @@ const Content: React.FC<ContentProps> = ({ week, img, textContent }) => {
                 <img
                   src={img}
                   className="img-fluid rounded"
-                  alt={`Week ${week}`}
+                  alt={translateThis(`Week ${week}`).String}
                 />
               </p>
             </div>
             <div className="col-md-6 text-start">
-              <p>{textContent}</p>
+              <p>{translateThis(textContent).String}</p>
             </div>
           </div>
         </div>

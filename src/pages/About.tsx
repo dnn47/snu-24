@@ -12,7 +12,7 @@ function About() {
         nameOne={translateThis("Home").String}
         linkOne="home"
         nameTwo={translateThis("Gilman Scholarship").String}
-        linkTwo="about"
+        linkTwo="gilman"
       />
       <div className="container move-down p-5">
         <div className="row">
