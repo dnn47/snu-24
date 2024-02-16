@@ -17,7 +17,6 @@ export const useTitleAnimation = (initialTitle: string) => {
           repeat={0}
           style={{
             whiteSpace: "pre-line",
-            width: "50rem",
             display: "block",
           }}
           className="text-title text-left"
