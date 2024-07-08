@@ -23,8 +23,7 @@ firebase deploy
 if [ -n "$option_c" ]; then
     echo -e "${GREEN}COMMITTING CHANGES WITH MESSAGE: $option_c${NC}"
     git status
-    git add .
-    git commit -m "$option_c"
+    git commit -a -m "$option_c"
     git status
     echo -e "${GREEN}WORK COMMITTED${NC}"
 
