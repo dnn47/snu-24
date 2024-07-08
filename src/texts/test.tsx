@@ -10,6 +10,7 @@ const textContent = [
   `SOKCHO`,
   `BASEBALL GAME`,
   `SNU BUDDY MT GROUP PICS`,
+  'JAPAN BREAK',
   `BIG GROUP MT`,
   `JEJU`,
   `FAREWELL DINNER`,
