@@ -6,7 +6,7 @@ import { useTitleAnimation } from "../utils/TitleAnimation";
 
 function Landing() {
   const typeAnimation = useTitleAnimation(
-    "hi, i'm Dune\ni studied abroad at SNU\nthis is my story"
+    "hi, i'm Dune\ni studied abroad at SNU\nthis is my blog"
   );
   return (
     <>
