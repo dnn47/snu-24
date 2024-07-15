@@ -25,6 +25,7 @@ if [ -n "$option_c" ]; then
     git status
     git add .
     git commit -m "$option_c"
+    git push
     git status
     echo -e "${GREEN}WORK COMMITTED${NC}"
 
