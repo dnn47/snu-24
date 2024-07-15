@@ -8,3 +8,13 @@ button.custom {
   border: 0px;
   background-color: #F9F9F9;
 }
+
+.large-text {
+  font-size: 1.25rem; 
+}
+
+.center-vertical {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}

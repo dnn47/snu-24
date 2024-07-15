@@ -27,7 +27,7 @@ const Content: React.FC<ContentProps> = ({ week, img, textContent }) => {
       </div>
       <div className="collapse" id={`collapseExample${week}`}>
         <div className="card card-body custom pb-0">
-          <div className="row">
+          <div className="row center-vertical">
             <div className="col-md-6">
               <p>
                 <img
@@ -38,7 +38,7 @@ const Content: React.FC<ContentProps> = ({ week, img, textContent }) => {
               </p>
             </div>
             <div className="col-md-6 text-start">
-              <p>{translateThis(textContent).String}</p>
+              <p className="large-text">{translateThis(textContent).String}</p>
             </div>
           </div>
         </div>
