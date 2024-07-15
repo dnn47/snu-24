@@ -19,7 +19,7 @@ function Timeline() {
           )}
           <Content
             week={index + 1}
-            img={"images/" + index + ".jpg"}
+            img={"images/" + (index+1) + ".jpg"}
             textContent={texts[index]}
           />
         </div>
