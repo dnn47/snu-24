@@ -1,3 +1,5 @@
+ #!/bin/bash
+
 # to bulid and deploy: ./build.sh
 # to build and deploy with comments: ./build.sh -c "My commit message for deployment changes"
 
