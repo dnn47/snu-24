@@ -1,6 +1,6 @@
 import React from "react";
 import Content from "./Content";
-import texts from "../texts/test";
+import texts from "../texts/text";
 
 function Timeline() {
   const numberOfWeeks = 15;
@@ -19,7 +19,7 @@ function Timeline() {
           )}
           <Content
             week={index + 1}
-            img={"images/" + index + ".jpg"}
+            img={"images/" + (index+1) + ".jpg"}
             textContent={texts[index]}
           />
         </div>
