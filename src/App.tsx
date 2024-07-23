@@ -8,7 +8,6 @@ import {
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Gilman from "./pages/Gilman";
-import Test from "./pages/Test";
 import Settings from "./pages/Settings";
 
 const App: React.FC = () => {
@@ -20,7 +19,6 @@ const App: React.FC = () => {
         <Route path="/about" element={<About />} />
         <Route path="/gilman" element={<Gilman />} />
         <Route path="/settings" element={<Settings />} />
-        <Route path="/test" element={<Test />} />
         <Route path="/*" element={<Navigate to="/Home" />} />
       </Routes>
     </Router>
