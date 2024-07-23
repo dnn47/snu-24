@@ -1,6 +1,6 @@
 import React from "react";
 import Content from "./Content";
-import texts from "../texts/test";
+import texts from "../texts/text";
 
 function Timeline() {
   const numberOfWeeks = 15;
